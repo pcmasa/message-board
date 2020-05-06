@@ -1,15 +1,15 @@
 <%= form_with(model: @message, local: true) do |f| %>
-    <%if message.error.any? %>
+    <%if message.errors.any? %>
         <div id="error-explanation">
             <ul>
-                <%= message.errors.full_messsages.each do |msg|> %>
+                <% message.errors.full_messages.each do |msg| %>
                     <li><%= msg %></li>
                 <%end%>
             </ul>
         </div>
     <%end%>
     
-    <%= f.labal :title, "タイトル"%>
+    <%= f.label :title, "タイトル"%>
     <%= f.text_field :title %>
 
     <%= f.label :content, "メッセージ"%>
