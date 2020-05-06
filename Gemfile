@@ -56,3 +56,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # install "kaminari"
 gem 'kaminari'
+
+#pry-byebug
+gem 'byebug', group: :development
+
+#Heroku
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
